@@ -1,16 +1,18 @@
 # Introduction 
-Environment setup to run the analysis for the confidential Baobab project
+Environment setup to run the analysis for the a project on the Forensic Analytics Server
 
 # Installation
 
 This project uses Poetry for dependency management (and if you want also for virtual environment management). If you haven't installed it already please use Poetry's [official docs](https://python-poetry.org/docs/#installation) for instructions.
 
 
-1. Clone the repository to your local computer
+1. Clone the repository to your local computer 
+
+*NOTE: AMEND BELOW FOR YOUR PROJECT
 
 ```bash
-git clone https://dev.azure.com/dttnl-fa-forensic-and-financial-crime/_git/Project%20Blue%20Ribbon%202
-cd baobab-analysis
+git clone https://dev.azure.com/dttnl-fa-forensic-and-financial-crime/_git/<MY_PROJECT>
+cd <MY_PROJECT>
 ```
 
 2. Switch to a virtual environment [Optional]
