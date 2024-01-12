@@ -2,7 +2,6 @@
 """
 
 import os
-
 # Import libraries necessary for the analysis
 from io import StringIO
 
@@ -61,12 +60,13 @@ class BlobStorage:
 
     # Function to download a csv file from Azure
     def download_csv_file_from_directory(
-        self, file_path: str
+        self, file_path: str, separator: str = ";"
     ) -> pd.DataFrame:  # the name of the file path (e.g., folder/file_name.csv)
         """Download csv files from a specific location within the blob container
 
         Args:
             file_path (str): the path to the flat file you want to download (e.g., folder/file_name.csv)
+            separator (str, optional): the separator used in the csv. Default to ; (semicolon)
 
         Raises:
             ValueError: file_name must end with .csv
@@ -81,7 +81,7 @@ class BlobStorage:
             fileBytesObject = file_client.download_file().readall()
             s = str(fileBytesObject, "utf-8")
             data = StringIO(s)
-            df = pd.read_csv(data, sep=";")
+            df = pd.read_csv(data, sep=separator)
             return df
         except Exception as e:
             print(e)
