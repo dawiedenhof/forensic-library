@@ -4,7 +4,6 @@
 import logging
 import os
 import struct
-
 # Import libraries necessary for the analysis
 from io import StringIO
 from typing import Literal, Optional
@@ -149,11 +148,17 @@ class SqlDatabase:
     """Database object to connect with SQL database"""
 
     # This connection option is defined by microsoft in msodbcsql.h
-    SQL_COPT_SS_ACCESS_TOKEN = 1256  
+    SQL_COPT_SS_ACCESS_TOKEN = 1256
     DRIVER = "{ODBC Driver 17 for SQL Server}"
     PORT = 1433
 
     def __init__(self, server_name: str, database_name: str):
+        """The constructor
+
+        Args:
+            server_name (str): name of server
+            database_name (str): name of database
+        """
         self.server_name = server_name
         self.database_name = database_name
         self.connection = None
@@ -167,7 +172,7 @@ class SqlDatabase:
         """Create the pyodbc connection with the database.
         Additionally sets _connection_string and _token_struct for use in sqlalchemy connection
         """
-        
+
         credential = DefaultAzureCredential(
             exclude_environment_credential=True,
             exclude_managed_identity_credential=True,
@@ -181,11 +186,13 @@ class SqlDatabase:
         self._token_struct = struct.pack(
             f"<I{len(token_bytes)}s", len(token_bytes), token_bytes
         )
-        self._connection_string = f"Driver={SqlDatabase.DRIVER};"\
-            f"Server=tcp:{self.server_name},{SqlDatabase.PORT};"\
-            f"Database={self.database_name};"\
-            f"Encrypt=yes;TrustServerCertificate=no;"\
+        self._connection_string = (
+            f"Driver={SqlDatabase.DRIVER};"
+            f"Server=tcp:{self.server_name},{SqlDatabase.PORT};"
+            f"Database={self.database_name};"
+            f"Encrypt=yes;TrustServerCertificate=no;"
             f"Connection Timeout=10;"
+        )
         try:
             self.connection = pyodbc.connect(
                 self._connection_string,
