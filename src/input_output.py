@@ -267,6 +267,7 @@ class SqlDatabase:
             table_name (str): Name of the table to write
             if_exists (Literal["fail", "replace", "append"], optional): Define what happens if the table already exists. Defaults to "fail".
             chunksize (int, optional): Specify the number of rows in each batch to be written at a time. Defaults to 10000.
+                The default setting is a good starting point, when Database errors (such as time-out errors) occur during writing, try to adjust the chunksize.
 
         Raises:
             ValueError: When optional `if_exists` is provided with an invalid input
