@@ -1,6 +1,9 @@
 # Introduction 
 Environment setup to run the analysis for the a project on the Forensic Analytics Server
 
+When copying this template, please make sure to replace the 'MY_PROJECT' placeholders with 
+your project nane in the text below and in the pyproject.toml file.
+
 # Installation
 
 This project uses Poetry for dependency management (and if you want also for virtual environment management). If you haven't installed it already please use Poetry's [official docs](https://python-poetry.org/docs/#installation) for instructions.
