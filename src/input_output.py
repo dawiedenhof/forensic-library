@@ -4,6 +4,7 @@
 import logging
 import os
 import struct
+
 # Import libraries necessary for the analysis
 from io import StringIO
 from typing import Literal, Optional
@@ -285,9 +286,9 @@ class SqlDatabase:
         # Write the data
         with self._alchemy_engine.connect() as alchemy_connection:
             dataframe.to_sql(
+                table_name,
                 alchemy_connection,
                 schema=schema,
-                name=table_name,
                 index=False,
                 if_exists=if_exists,
                 chunksize=chunksize,
