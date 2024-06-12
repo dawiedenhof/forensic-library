@@ -6,7 +6,7 @@ your project nane in the text below and in the pyproject.toml file.
 
 # Installation
 
-This project uses Poetry for dependency management (and if you want also for virtual environment management). If you haven't installed it already please use Poetry's [official docs](https://python-poetry.org/docs/#installation) for instructions. If you find that your installation of Poetry on the AVD is being blocked by group policies, ensure that you have been added to the NL AVD PRD FAFOC group. Contact IT support to explain the issue and let them add you to this group.
+This project uses Poetry for dependency management (and if you want also for virtual environment management). If you haven't installed it already please use Poetry's [official docs](https://python-poetry.org/docs/#installation) for instructions. If you find that your installation of Poetry on the AVD is being blocked by group policies, ensure that you have been added to the NL AVD PRD FAFOC group. Jaap Nieland has access to a Power BI dashboard to check group membership. Contact IT support to explain the issue and let them add you to this group.
 
 
 1. Clone the repository to your local computer 
