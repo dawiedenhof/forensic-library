@@ -4,6 +4,7 @@
 import logging
 import os
 import struct
+import xml.etree.ElementTree as ET
 
 # Import libraries necessary for the analysis
 from io import StringIO
@@ -13,6 +14,7 @@ import pandas as pd
 import pyodbc
 import sqlalchemy
 from azure.identity import DefaultAzureCredential
+from azure.storage.blob import BlobServiceClient
 from azure.storage.filedatalake import DataLakeServiceClient
 
 logger = logging.getLogger(__name__)
@@ -38,6 +40,12 @@ class BlobStorage:
             )
             self.file_system_client = self.service_client.get_file_system_client(
                 file_system=blob_container_name
+            )
+            self.blob_service_client = BlobServiceClient(
+                account_url="{}://{}.blob.core.windows.net".format(
+                    "https", storage_account_name
+                ),
+                credential=default_credential,
             )
 
         except Exception as e:
@@ -94,19 +102,35 @@ class BlobStorage:
         except Exception as e:
             print(e)
 
-    # Function to download a csv file from Azure
+    # Function to download a .xlsx file from Azure
     def download_xlsx_file_from_directory(
-        self, file_path: str
+        self, file_path: str, sheet_name: str = None
     ) -> pd.DataFrame:  # the name of the file path (e.g., folder/file_name.xlsx)
         if not file_path.endswith(".xlsx"):
             raise ValueError("file_name must end with .xlsx")
         try:
             file_client = self.file_system_client.get_file_client(file_path=file_path)
             fileBytesObject = file_client.download_file().readall()
-            df = pd.read_excel(fileBytesObject)
+            df = pd.read_excel(fileBytesObject, sheet_name=sheet_name)
             return df
         except Exception as e:
             print(e)
+
+    def download_xml_file_from_directory(
+        self, file_path: str, xpath: str = None, get_root: bool = False
+    ) -> pd.DataFrame:
+        file_client = self.file_system_client.get_file_client(file_path=file_path)
+        fileBytesObject = file_client.download_file().readall()
+        s = str(fileBytesObject, "utf-8")
+        data = StringIO(s)
+
+        if get_root:
+            tree = ET.parse(data)
+            root = tree.getroot()
+            return root
+        else:
+            df = pd.read_xml(data, xpath=xpath)
+            return df
 
     # TODO: Make sure overwriting the input files is not allowed
     def upload_df_as_csv(
@@ -125,6 +149,25 @@ class BlobStorage:
             file_client = directory_client.create_file(file_name)
             file_client.append_data(data=df_csv, offset=0, length=len(df_csv))
             file_client.flush_data(len(df_csv))
+
+        except Exception as e:
+            print(e)
+
+    def upload_df_to_blob(self, df: pd.DataFrame, container: str, blob: str) -> None:
+        """Upload pandas Dataframe as csv to an Azure Blob container allowing file sizes over 4mb
+
+        Args:
+            df (pd.DataFrame): the dataframe you want to upload as csv
+            container (str): string of the container name
+            blob (str): destination path of the csv
+        """
+        try:
+            df_csv = StringIO
+            df_csv = df.to_csv(index=False)
+            blob_client = self.blob_service_client.get_blob_client(
+                container=container, blob=blob
+            )
+            blob_client.upload_blob(df_csv, overwrite=True)
 
         except Exception as e:
             print(e)

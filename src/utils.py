@@ -1,8 +1,8 @@
 """Utility functions that can be used within the project
 """
 
-import hashlib
 import logging
+import hashlib
 import os
 
 import pandas as pd

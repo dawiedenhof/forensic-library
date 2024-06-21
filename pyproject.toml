@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "MY_PROJECT"
+name = "baobab"
 version = "0.1.0"
 description = ""
 authors = ["ddiepgrond <ddiepgrond@deloitte.nl>"]
@@ -21,9 +21,6 @@ azure-identity = "^1.14.0"
 azure-storage-file-datalake = "^12.13.1"
 xlrd = "^2.0.1"
 seaborn = "^0.13.0"
-pyodbc = "^5.0.1"
-sqlalchemy = "^2.0.25"
-python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -44,5 +41,5 @@ addopts = [
     "--import-mode=importlib",
 ]
 pythonpath = [
-  "MY_PROJECT",
+  "baobab",
 ]
