@@ -102,7 +102,7 @@ class BlobStorage:
         except Exception as e:
             print(e)
 
-    # Function to download a csv file from Azure
+    # Function to download a .xlsx file from Azure
     def download_xlsx_file_from_directory(
         self, file_path: str, sheet_name: str = None
     ) -> pd.DataFrame:  # the name of the file path (e.g., folder/file_name.xlsx)
