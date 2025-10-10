@@ -36,10 +36,10 @@ st.markdown("""
     operating model that supports resilience, growth and stakeholder expectations. It emphasises strategic risk management \
     and digital transformation as the twin enablers of stability and adaptive capability.
 
-    Risk‑based approach: Identify, assess and prioritise risks across strategy, operations and supply chains, allocate \
+    - **Risk‑based approach:** Identify, assess and prioritise risks across strategy, operations and supply chains, allocate \
     resources proportionately, and embed risk assessment into decision‑making, planning and stress‑testing to \
     ensure resilience and capital efficiency.
-    Use of technology: Leverage data analytics, automation and integrated dashboards for continuous monitoring \
+    - **Use of technology:** Leverage data analytics, automation and integrated dashboards for continuous monitoring \
     and early‑warning, adopt cloud and digital platforms for scalability, and ensure strong model governance, \
     data quality and cyber‑controls to make tech‑driven insights reliable and actionable.
 """)
