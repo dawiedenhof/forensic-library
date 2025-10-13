@@ -4,7 +4,7 @@ import pandas as pd
 #layout
 st.set_page_config(layout="wide")
 
-st.write("### This page contains several documents related to AML/CTF industry baselines and QA sessions.")
+st.write("### This page contains documents related to AML/CTF industry baselines and QA sessions.")
 
 st.header("DNB Q&As and Good Practices Q&A:question:")
 st.markdown("""
