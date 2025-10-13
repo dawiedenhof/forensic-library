@@ -10,15 +10,15 @@ st.title("Forensic :blue[Analytics]:green[.] FEC Reading Guide")
 st.markdown(
     """
     You can use the this reading guide to reference relevant literature on AML and CTF topics.
-    The documents are groupd into the following categories:
+    The documents are grouped into the following categories:
     - **Fundamentals:** the basics to our domain.
         - Guideline on the WWFT and SW
         - From recovery to balance
     - **Baselines and Q&A:** additions to the basics based on newer publications.
-        - DNB Wwft Q&As and Good Practices
+        - DNB WWft Q&As and Good Practices
         - NVB Industry Baseline Client Data Actualisation
     - **Advanced reading:** more in-depth publications on specific topics.
-        - Anit-Money Laudering Regulation (AMLR)
+        - Anti-Money Laundering Regulation (AMLR)
 
     Navigate to these sections via the buttons at the top of this page.
 
@@ -46,7 +46,7 @@ st.markdown(
     6. Do not make up information that is not present in the document.
 
     ***** Output format *****
-    Provide answer with a maximun length of 200 words. If applicable, include references to specific
+    Provide answer with a maximum length of 200 words. If applicable, include references to specific
     sections or pages in the document.
     ```
     """
