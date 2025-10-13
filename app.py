@@ -10,11 +10,15 @@ load_dotenv()
 if "auth" not in st.session_state:
     st.session_state.auth = False
 
+
 def check_password():
     """Returns `True` if the user had the correct password."""
+
     def password_entered():
         # If you use .streamlit/secrets.toml, replace os.environ.get with st.secrets["STREAMLIT_PASSWORD"]
-        if hmac.compare_digest(st.session_state["password"], os.environ.get("STREAMLIT_PASSWORD", "")):
+        if hmac.compare_digest(
+            st.session_state["password"], os.environ.get("STREAMLIT_PASSWORD", "")
+        ):
             st.session_state["password_correct"] = True
             del st.session_state["password"]
         else:
@@ -33,6 +37,7 @@ def check_password():
         st.error("😕 Password incorrect")
     return False
 
+
 if not check_password():
     st.stop()
 
@@ -42,6 +47,6 @@ fundamentals = st.Page("pages/fundamentals.py", title="Fundamental reading")
 baseline_and_qa = st.Page("pages/baseline_and_qa.py", title="Baseline and QA")
 advanced = st.Page("pages/advanced.py", title="Advanced reading")
 
-pg = st.navigation([home, fundamentals, baseline_and_qa, advanced], position = "top")
+pg = st.navigation([home, fundamentals, baseline_and_qa, advanced], position="top")
 
 pg.run()

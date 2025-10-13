@@ -1,5 +1,4 @@
-"""Data loading and writing module
-"""
+"""Data loading and writing module"""
 
 import logging
 import os

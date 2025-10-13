@@ -1,5 +1,4 @@
-"""Utility functions that can be used within the project
-"""
+"""Utility functions that can be used within the project"""
 
 import logging
 import hashlib
