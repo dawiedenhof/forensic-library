@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # layout
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 st.write(
     "### This page contains documents related to AML/CTF industry baselines and QA sessions."
@@ -11,7 +11,7 @@ st.write(
 st.header("DNB Q&As and Good Practices Q&A:question:")
 st.markdown(
     """
-    The [consultation document](https://www.dnb.nl/media/vl5jm5g2/dnb-wwft-qa-good-practices-consultatieversie-eng.pdf) \
+    The [Q&A and good practices](https://www.dnb.nl/media/z0upf3bv/dnb-wwft-qas-and-good-practices.pdf) \
     sets out De Nederlandsche Bank’s proposed good practices to help obliged entities implement the Netherlands’ WWFT \
             (AML/CFT) requirements by clarifying supervisory expectations and offering practical measures to prevent, \
             detect and report money‑laundering and terrorist financing. It covers the full AML/CFT control cycle and \
@@ -33,8 +33,8 @@ st.markdown(
 
 with st.expander("DNB Wwft Q&As and Good Practices"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/dnb-wwft-qa-good-practices-consultatieversie-eng.pdf",
-        height=530,
+        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/dnb-wwft-qas-and-good-practices.pdf",
+        height=620,
     )
 
 st.divider()
