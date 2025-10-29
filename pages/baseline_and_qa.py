@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # layout
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 st.write(
     "### This page contains documents related to AML/CTF industry baselines and QA sessions."
