@@ -33,7 +33,7 @@ st.markdown(
 """
 )
 
-with st.expander("Guideline on the WWFT and SW"):
+with st.expander("Anti Money Laundering Regulation"):
     st.pdf(
         "pdfs/OJ_L_202401624_EN_TXT.pdf",
         height=860,
