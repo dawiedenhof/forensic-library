@@ -35,6 +35,6 @@ st.markdown(
 
 with st.expander("Guideline on the WWFT and SW"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/OJ_L_202401624_EN_TXT.pdf",
+        "pdfs/OJ_L_202401624_EN_TXT.pdf",
         height=860,
     )

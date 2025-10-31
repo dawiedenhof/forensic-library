@@ -33,7 +33,7 @@ st.markdown(
 
 with st.expander("DNB Wwft Q&As and Good Practices"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/dnb-wwft-qas-and-good-practices.pdf",
+        "pdfs/dnb-wwft-qas-and-good-practices.pdf",
         height=620,
     )
 
@@ -68,7 +68,7 @@ st.markdown(
 
 with st.expander("NVB Industry Baseline Client Data Actualisation"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/nvb-standaarden_5_client-data-actualisation_30-5.pdf",
+        "pdfs/nvb-standaarden_5_client-data-actualisation_30-5.pdf",
         height=620,
     )
 

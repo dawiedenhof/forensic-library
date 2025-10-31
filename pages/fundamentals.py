@@ -28,7 +28,7 @@ st.markdown(
 
 with st.expander("Guideline on the WWFT and SW"):
     st.pdf(
-        "pdfs\leidraad-wwft-sw-eng.pdf",
+        "pdfs/leidraad-wwft-sw-eng.pdf",
         height=850,
     )
 
@@ -53,7 +53,7 @@ st.markdown(
 
 with st.expander("From recovery to balance"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/from-recovery-to-balance.pdf",
+        "pdfs/from-recovery-to-balance.pdf",
         height=580,
     )
 
