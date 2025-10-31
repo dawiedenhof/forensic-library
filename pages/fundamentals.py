@@ -28,7 +28,7 @@ st.markdown(
 
 with st.expander("Guideline on the WWFT and SW"):
     st.pdf(
-        "C:/Users/dwiedenhof/Documents/streamlit_template/Streamlit template/pdfs/leidraad-wwft-sw-eng.pdf",
+        "pdfs\leidraad-wwft-sw-eng.pdf",
         height=850,
     )
 
