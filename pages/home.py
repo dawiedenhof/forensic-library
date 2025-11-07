@@ -31,8 +31,8 @@ with col1:
 # summarization prompt
 with col2:
     st.markdown(
-    """
-        #### Quick document analysis with Headstart :mag_right:    
+        """
+        #### Quick document analysis with Headstart :mag_right:
         While it's a good idea to familiarize yourself with at least the fundamentals, these documents
         can be quite lengthy. To get a quick answer to a pressing question, you can consult these documents
         with the help of [Headstart](https://headstart.deloitte.nl). Use the prompt template below to get
@@ -40,7 +40,7 @@ with col2:
 
         ```
         ***** Context *****
-        I am a consultant in the FEC domain who has received a guideline from the regulator and I need 
+        I am a consultant in the FEC domain who has received a guideline from the regulator and I need
         assistance in analysing the document.
 
         ***** Task *****
@@ -54,7 +54,7 @@ with col2:
         2. Extract relevant information that directly addresses the question.
         3. Provide a clear and concise answer based on the document's content.
         4. Provide references to specific sections or pages in the document to support your answer.
-        5. If the document does not contain sufficient information to answer the question, respond 
+        5. If the document does not contain sufficient information to answer the question, respond
         accordingly.
         6. Do not make up information that is not present in the document.
 
