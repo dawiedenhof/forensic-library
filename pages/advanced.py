@@ -63,3 +63,29 @@ with st.expander("BCBS239"):
         "pdfs/bcbs239.pdf",
         height=860,
     )
+
+st.header("General Data Protection Regulation (GDPR) :lock:")
+st.markdown(
+    """
+    The [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679) (Algemene verordening gegevensbescherming or AVG) is a
+    regulation in EU law on data protection and privacy. Under the General Data Protection Regulation (GDPR), organisations that collect and
+    use personal data have been given more responsibilities. And the people whose data they use have been given more rights. Do organisations
+    fail to observe the rules? Then they may be fined.
+
+    The 6 principles from the GDPR are:
+    1. lawfulness, fairness and transparency;
+    2. purpose limitation;
+    3. data minimisation;
+    4. accuracy;
+    5. storage limitation;
+    6. confidentiality and integrity.
+
+    The Authoriteits Persoonsgegevens (AP) provides a very convenient [webpage](https://www.autoriteitpersoonsgegevens.nl/en/themes/basic-gdpr/gdpr-basics/the-gdpr-in-brief) on the basics of the GDPR.
+    """
+)
+
+with st.expander("GDPR"):
+    st.pdf(
+        "pdfs/CELEX_32016R0679_EN_TXT.pdf",
+        height=860,
+    )
