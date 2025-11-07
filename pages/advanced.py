@@ -38,3 +38,28 @@ with st.expander("Anti Money Laundering Regulation"):
         "pdfs/OJ_L_202401624_EN_TXT.pdf",
         height=860,
     )
+
+st.header("Basel Committee on Banking Supervision (BCBS) 239  :classical_building:")
+st.markdown(
+    """
+    The [Basel Committee on Banking Supervision (BCBS) 239)](https://https://www.bis.org/publ/bcbs239.pdf) provides principles for effective risk data aggregation
+    and risk reporting to enhance banks' risk management practices. The principles aim to improve banks' ability to aggregate risk data
+    accurately and timely, enabling better decision-making and risk oversight.
+
+    Main takeaways
+    - **Governance and infrastructure:** banks should establish strong governance frameworks and invest in robust IT infrastructure
+    to support effective risk data aggregation and reporting.
+    - **Data architecture and quality:** banks need to develop comprehensive data architectures that ensure data accuracy, completeness,
+    timeliness, and integrity across the organization.
+    - **Risk reporting practices:** banks should implement clear and consistent risk reporting practices that provide relevant,
+    accurate, and timely information to senior management and the board.
+    - **Supervisory review:** supervisors should assess banks' compliance with the principles and take appropriate actions to address
+    deficiencies.
+    """
+)
+
+with st.expander("BCBS239"):
+    st.pdf(
+        "pdfs/bcbs239.pdf",
+        height=860,
+    )
