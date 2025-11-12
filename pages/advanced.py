@@ -39,6 +39,8 @@ with st.expander("Anti Money Laundering Regulation"):
         height=860,
     )
 
+st.divider()
+
 st.header("Basel Committee on Banking Supervision (BCBS) 239  :classical_building:")
 st.markdown(
     """
