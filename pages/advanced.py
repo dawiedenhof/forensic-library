@@ -66,6 +66,8 @@ with st.expander("BCBS239"):
         height=860,
     )
 
+st.divider()
+
 st.header("General Data Protection Regulation (GDPR) :lock:")
 st.markdown(
     """
