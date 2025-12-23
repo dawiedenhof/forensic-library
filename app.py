@@ -47,7 +47,13 @@ home = st.Page("pages/home.py", title="Home")
 fundamentals = st.Page("pages/fundamentals.py", title="Fundamental reading")
 baseline_and_qa = st.Page("pages/baseline_and_qa.py", title="Baseline and QA")
 advanced = st.Page("pages/advanced.py", title="Advanced reading")
+artificial_intelligence = st.Page(
+    "pages/artificial_intelligence.py", title="AI & Modelling"
+)
 
-pg = st.navigation([home, fundamentals, baseline_and_qa, advanced], position="top")
+pg = st.navigation(
+    [home, fundamentals, baseline_and_qa, advanced, artificial_intelligence],
+    position="top",
+)
 
 pg.run()

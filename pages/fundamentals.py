@@ -6,9 +6,6 @@ st.set_page_config(layout="wide")
 
 st.write("### Hi there colleague, welcome to the Forensic Analytics reading guide.")
 
-# col1, col2 = st.columns(2, border=True)
-
-
 st.header("The WWFT bible :open_book:")
 st.markdown(
     """
