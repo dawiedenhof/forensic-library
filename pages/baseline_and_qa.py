@@ -73,3 +73,38 @@ with st.expander("NVB Industry Baseline Client Data Actualisation"):
     )
 
 st.divider()
+
+st.header("NVB Industry Baseline Client Data Actualisation :abacus:")
+st.markdown(
+    """
+    The [NVB Industry Baseline on Models in alert and event generation]
+    (https://www.nvb.nl/media/ophlutr2/nvb-baseline-models-in-alert-and-event-generation-en.pdf)
+    offers practical guidance for banks to use models (rule‑based and advanced) in AML/CFT alert
+    and event generation. It promotes a risk‑based approach to detect ML/TF, supports transition
+    from simple rules to advanced models, and stresses the need for ongoing validation, data
+    governance and proportionate oversight to ensure reliable, explainable and fair use.
+
+    Key topics covered include:
+
+    - **Risk‑based application:** Principles for tuning model sensitivity, bucketing outputs
+    (e.g. low/medium/high) and linking buckets to differentiated operational responses
+    (automated handling, risk‑differentiated review, comprehensive review).
+    - **Data and performance:** Expectations for sourcing, cleansing and regularly actualising
+    client and transaction data; quantitative performance metrics (precision/recall), pre‑implementation
+    testing and continuous monitoring/back‑testing.
+    - **Governance and explainability:** Clear roles and responsibilities across model owners,
+    first‑line users, AML/CFT compliance and model‑risk functions; requirements for transparency,
+    explainability and safeguards against biased outcomes.
+    - **Controls, validation and auditability:** Independent validation, change control,
+    documentation standards, reproducible decision records and evidential trails to demonstrate controlled,
+    responsible deployment and regulatory compliance.
+"""
+)
+
+with st.expander("NVB Industry Baseline Model In Alert and Event Generation"):
+    st.pdf(
+        "pdfs/nvb-baseline-models-in-alert-and-event-generation-en.pdf",
+        height=620,
+    )
+
+st.divider()
