@@ -77,8 +77,7 @@ st.divider()
 st.header("NVB Industry Baseline Client Data Actualisation :abacus:")
 st.markdown(
     """
-    The [NVB Industry Baseline on Models in alert and event generation]
-    (https://www.nvb.nl/media/ophlutr2/nvb-baseline-models-in-alert-and-event-generation-en.pdf)
+    The [NVB Industry Baseline on Models in alert and event generation](https://www.nvb.nl/media/ophlutr2/nvb-baseline-models-in-alert-and-event-generation-en.pdf)
     offers practical guidance for banks to use models (rule‑based and advanced) in AML/CFT alert
     and event generation. It promotes a risk‑based approach to detect ML/TF, supports transition
     from simple rules to advanced models, and stresses the need for ongoing validation, data
